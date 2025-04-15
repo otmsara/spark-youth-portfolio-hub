@@ -54,8 +54,7 @@ const SkillsSection = () => {
                     </div>
                     <Progress 
                       value={tech.proficiency} 
-                      className="h-2 bg-gray-200" 
-                      indicatorClassName="bg-portfolio-purple"
+                      className="h-2 bg-gray-200 [&>div]:bg-portfolio-purple" 
                     />
                   </div>
                 ))}
