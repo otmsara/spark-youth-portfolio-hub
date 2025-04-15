@@ -22,4 +22,13 @@ export default defineConfig(({ mode }) => ({
   },
   // Configuration pour GitHub Pages
   base: './', // Utilise des chemins relatifs au lieu de chemins absolus
+  build: {
+    // Assurons-nous que les fichiers sont servis avec les bons types MIME
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 }));
