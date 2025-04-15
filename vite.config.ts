@@ -25,9 +25,13 @@ export default defineConfig(({ mode }) => ({
   build: {
     // Assurons-nous que les fichiers sont servis avec les bons types MIME
     assetsInlineLimit: 0,
+    outDir: './', // Output à la racine du projet pour GitHub Pages
     rollupOptions: {
       output: {
         manualChunks: undefined,
+        entryFileNames: 'main.js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]'
       },
     },
   },
